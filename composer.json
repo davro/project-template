@@ -1,0 +1,33 @@
+{
+    "name": "davro/project-template",
+    "description": "Project Template for the Fabrication project",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "David Stevens",
+            "email": "mail.davro@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "ProjectTemplate\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "ProjectTemplate\\Tests\\": "tests"
+        }
+    },
+    "require": {},
+    "require-dev": {
+        "phpunit/phpunit": "^7.0"
+    },
+    "scripts": {
+        "runall": ["@run1", "@run2"],
+        "run": "php project-template.php data/example-input",
+        "run1": "php project-template.php data/example-input 1",
+        "run2": "php project-template.php data/example-input 2",
+        "test": "vendor/bin/phpunit --bootstrap vendor/autoload.php --colors=always tests"
+    }
+}
